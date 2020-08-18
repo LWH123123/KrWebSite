@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--设置-->
+    <string-array name="my_setting_txt">
+        <item>修改密码</item>
+        <item>更换手机号</item>
+    </string-array>
+
+</resources>

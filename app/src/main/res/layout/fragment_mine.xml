@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.classic.common.MultipleStatusView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/multiple_status_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/viewBackground">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/defualt">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/defualt">
+                <!-- module one-->
+                <include layout="@layout/ui_layout_mine_module_one_old" />
+                <!--module  top-->
+                <include layout="@layout/ui_layout_mine_module_cardview_top_old" />
+                <!--module two-->
+                <include layout="@layout/ui_layout_mine_module_two_old" />
+                <!--module end-->
+                <include layout="@layout/ui_layout_mine_module_end_old" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</com.classic.common.MultipleStatusView>

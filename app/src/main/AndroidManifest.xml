@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hlt.jzwebsite">
+
+    <!--   app内        permission   start  -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--  app内       permission   end  -->
+
+    <!-- other  三方  permission    start -->
+    <!-- for mta statistics -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- other  三方   permission    end -->
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="m">
+
+        <!-- Android 8（API级别26）以上设置更高的最大纵横比 2.4 -->
+        <!-- 对于Android 7.1（API级别25）以下需要在配置文件中声明   android:resizeableActivity="false" -->
+        <!-- 全面屏适配 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+
+        <!-- ===========================APP activiity     start  ======================================== -->
+
+
+        <activity android:name=".ui.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+        </activity>
+        <!--引导页-->
+        <activity android:name=".ui.activity.GuideActivity"
+            android:launchMode="singleTop"/>
+        <!--文章详情页-->
+        <activity android:name=".ui.activity.WebActivity" />
+        <!--收藏-->
+        <activity android:name=".ui.activity.CollectionActivity" />
+        <!--设置-->
+        <activity android:name=".ui.activity.SettingActivity" />
+        <!--修改密码-->
+        <activity android:name=".ui.activity.ModifyPwdActivity" />
+        <!--更换手机号-->
+        <activity android:name=".ui.activity.ModifyPhoneActivity" />
+        <!-- 在线纪实-->
+        <activity
+            android:name=".ui.activity.WebVideoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true" />
+        <!-- 文章详情页-->
+        <activity android:name=".ui.activity.WebDetailActivity" />
+        <!--上市项目list-->
+        <activity android:name=".ui.activity.ProjectListActivity" />
+        <!--更多 课堂培训-->
+        <activity android:name=".ui.activity.ClassListActivity" />
+        <!--详情页 公用-->
+        <activity android:name=".ui.activity.WebDetailCommActivity" />
+        <!--立即推广-->
+        <activity android:name=".ui.activity.GoToPromotionActivity"/>
+        <!--验证码登录-->
+        <activity android:name=".ui.activity.VerificaCodeLoginActivity"/>
+        <!--验证码输入-->
+        <activity android:name=".ui.activity.VerificaCodeInputActivity"/>
+        <!--联系方式-->
+        <activity android:name=".ui.activity.ContactWayActivity"/>
+        <!--视频播放-->
+        <activity android:name=".ui.activity.video.VideoPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+
+
+
+        <!-- ===========================APP activiity     end  ======================================== -->
+        <!-- 对接three party    start -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.hlt.jzwebsite"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 对接three party    end -->
+
+    </application>
+
+</manifest>

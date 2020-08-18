@@ -1,0 +1,34 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
+
+buildscript {
+    ext.kotlin_version = '1.3.50'
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        // 查阅博文：https://blog.csdn.net/wjj1996825/article/details/97833226
+        // kotlin 项目 编译报错，控件id 引用不到  配置
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+        classpath "com.mob.sdk:MobSDK:+"  //shareSdk
+    }
+}
+allprojects {
+    repositories {
+        google()
+        //gradle编译错误ModuleVersionNotFoundException 需配置以下 仓库
+        maven { url 'https://maven.google.com' }
+        jcenter()
+        maven { url 'https://jitpack.io' }
+
+    }
+}
+
+

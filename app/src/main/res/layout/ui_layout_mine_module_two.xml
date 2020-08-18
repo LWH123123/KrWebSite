@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons_two"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/defualt"
+    android:paddingTop="@dimen/dp_30"
+    android:paddingBottom="@dimen/dp_40"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/cons_account"
+    tools:showIn="@layout/fragment_mine_new">
+
+    <TextView
+        android:id="@+id/tv_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@android:color/transparent"
+        android:text="@string/team_txt"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_team_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@android:color/transparent"
+        android:gravity="bottom"
+        android:text="@string/team_txt_tip_new"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@id/tv_team_num"
+        app:layout_constraintLeft_toRightOf="@id/tv_team_num"
+        app:layout_constraintTop_toBottomOf="@id/tv_team" />
+
+    <TextView
+        android:id="@+id/tv_team_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@android:color/transparent"
+        android:paddingLeft="@dimen/dp_4"
+        android:paddingRight="@dimen/dp_4"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_team"
+        tools:text="@string/team_txt_num" />
+
+    <!--module end-->
+</androidx.constraintlayout.widget.ConstraintLayout>

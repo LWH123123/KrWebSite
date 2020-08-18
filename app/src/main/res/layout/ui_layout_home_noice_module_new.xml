@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons_noice"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/defualt"
+    android:paddingTop="@dimen/dp_4"
+    android:paddingBottom="@dimen/dp_4"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/recyc_project"
+    tools:showIn="@layout/fragment_home_new">
+
+    <TextView
+        android:id="@+id/tv_notice_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:drawableLeft="@mipmap/ic_home_noice"
+        android:drawablePadding="@dimen/dp_4"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/dp_4"
+        android:maxLines="1"
+        android:text=""
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/mine_txt_noice"/>
+
+    <!--参考链接　http://p.codekk.com/detail/Android/sfsheng0322/MarqueeView-->
+    <com.sunfusheng.marqueeview.MarqueeView
+        android:id="@+id/notice"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginRight="@dimen/dp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_notice_tip"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mvAnimDuration="1000"
+        app:mvDirection="right_to_left"
+        app:mvGravity="left"
+        app:mvInterval="3000"
+        app:mvSingleLine="true"
+        app:mvTextColor="@color/brown_light"
+        app:mvTextSize="@dimen/sp_12"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

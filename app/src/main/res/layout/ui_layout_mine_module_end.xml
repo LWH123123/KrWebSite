@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons_end"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/defualt"
+    android:padding="@dimen/dp_12"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/cons_two"
+    tools:showIn="@layout/fragment_mine_new">
+
+    <View
+        android:id="@+id/view_tip"
+        android:layout_width="@dimen/dp_6"
+        android:layout_height="@dimen/dp_20"
+        android:background="@color/colorPrimary"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_partner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/mine_txt_partner"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/sp_16"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/view_tip"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--加盟广告-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_partner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_60"
+        android:background="@mipmap/ic_banner_mine_bottom"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_partner" />
+    <!--加盟广告 recycleview-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyc_partner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_60"
+        android:background="@color/defualt"
+        android:overScrollMode="never"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_partner"
+        tools:listItem="@layout/item_recy_home_mine_partner" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

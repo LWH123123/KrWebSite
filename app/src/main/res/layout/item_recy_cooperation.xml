@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginLeft="@dimen/dp_12"
+    android:layout_marginTop="@dimen/dp_6"
+    android:layout_marginRight="@dimen/dp_12"
+    android:layout_marginBottom="@dimen/dp_6"
+    app:cardElevation="@null"
+    app:cardCornerRadius="@dimen/dp_5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/dp_12">
+
+        <View
+            android:id="@+id/view_tip"
+            android:layout_width="@dimen/dp_6"
+            android:layout_height="@dimen/dp_20"
+            android:visibility="gone"
+            android:background="@color/colorPrimary"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--title-->
+        <!--  android:layout_marginLeft="@dimen/dp_12"-->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintStart_toEndOf="@id/view_tip"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="联系方式" />
+        <!--desc-->
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_12"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/dp_4"
+            android:maxLines="2"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toEndOf="@id/view_tip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:text="全国统一热线：400-777-1400" />
+
+
+        <!--see more-->
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020年3月30日"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintStart_toStartOf="@+id/tv_desc"
+            app:layout_constraintTop_toTopOf="@+id/tv_see_more" />
+
+        <TextView
+            android:id="@+id/tv_see_more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_12"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/dp_4"
+            android:maxLines="2"
+            android:text="@string/see_more"
+            android:textColor="@color/colorYello"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintTop_toBottomOf="@id/tv_desc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

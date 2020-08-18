@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/nav_item_icon_home_selector"
+            android:title="@string/home"
+            app:showAsAction="ifRoom" />
+
+        <item
+            android:id="@+id/dynamics"
+            android:icon="@drawable/nav_item_icon_dy_selector"
+            android:title="@string/dynamics"
+            app:showAsAction="ifRoom" />
+
+        <item
+            android:id="@+id/cooperation"
+            android:icon="@drawable/nav_item_icon_coo_selector"
+            android:title="@string/cooperation"
+            app:showAsAction="ifRoom"
+            />
+        <item
+            android:id="@+id/mine"
+            android:icon="@drawable/nav_item_icon_mine_selector"
+            android:title="@string/mine"
+            app:showAsAction="ifRoom" />
+
+    </group>
+
+</menu>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/dp_12">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_6"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cardView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="君子道房车驰援各地君子君子道房车驰援各地君子" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_12"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/dp_4"
+        android:maxLines="2"
+        android:textSize="@dimen/sp_14"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cardView"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:text="疫情以来，疫情以来疫情以来疫情以来疫情以来疫情以来疫情以来疫情以来疫情以来疫情以来疫情以来" />
+
+    <!--time -->
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_12"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/dp_4"
+        android:maxLines="3"
+        android:textSize="@dimen/sp_16"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitle"
+        tools:text="2020-01-03" />
+    <!--line-->
+    <View
+        android:id="@+id/view_space"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_05"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cardView"
+        app:layout_constraintTop_toBottomOf="@id/subtitle" />
+
+    <!--theme-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_80"
+        app:cardCornerRadius="@dimen/dp_0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_theme"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/bg_placeholder" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

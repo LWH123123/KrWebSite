@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons_account"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_200"
+    android:background="@drawable/shape_btn_lefetop_radius_gray"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:showIn="@layout/fragment_mine_new">
+
+    <!--module two  余额 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrl_balance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:paddingLeft="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/constrl_integral"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_tip_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_mine_iv_one"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--总资产-->
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="@dimen/dp_4"
+            android:text=""
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/iv_tip_one"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0.00" />
+
+        <TextView
+            android:id="@+id/tv_balanceTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:text="@string/mine_balance_txt"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintLeft_toRightOf="@id/iv_tip_one"
+            app:layout_constraintTop_toBottomOf="@id/tv_balance" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--module two  积分 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrl_integral"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:paddingLeft="@dimen/dp_6"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_12"
+        app:layout_constraintLeft_toRightOf="@id/constrl_balance"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_tip_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_mine_iv_two"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--总资产-->
+        <TextView
+            android:id="@+id/tv_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="@dimen/dp_4"
+            android:text=""
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/iv_tip_two"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="30.00" />
+
+        <TextView
+            android:id="@+id/tv_integralTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:text="@string/mine_integral_txt"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/iv_tip_two"
+            app:layout_constraintTop_toBottomOf="@id/tv_integral" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_30"
+        android:background="@color/defualt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constrl_integral" />
+
+    <!--module three  推广佣金 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrl_three"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:paddingLeft="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/constrl_yesterday"
+        app:layout_constraintTop_toBottomOf="@id/constrl_balance">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_tip_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_mine_iv_three"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_extensionAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="@dimen/dp_4"
+            android:text=""
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/iv_tip_three"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0.00" />
+
+        <TextView
+            android:id="@+id/tv_extensionTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:text="@string/mine_extension_amount_txt"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/iv_tip_three"
+            app:layout_constraintTop_toBottomOf="@id/tv_extensionAmount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--module two  昨日收益 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrl_yesterday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:paddingLeft="@dimen/dp_6"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_12"
+        app:layout_constraintLeft_toRightOf="@id/constrl_three"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constrl_balance">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_tip_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_mine_iv_four"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--昨日收益-->
+        <TextView
+            android:id="@+id/tv_yesterday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="@dimen/dp_4"
+            android:text=""
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/iv_tip_four"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="+0.00" />
+
+        <TextView
+            android:id="@+id/tv_yesterdayTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mine_yesterday_txt"
+            android:textSize="@dimen/sp_12"
+            android:layout_marginLeft="@dimen/dp_6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/iv_tip_four"
+            app:layout_constraintTop_toBottomOf="@id/tv_yesterday" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

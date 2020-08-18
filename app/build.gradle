@@ -1,0 +1,168 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'//支持Android的注解处理
+
+
+apply plugin: 'com.mob.sdk'
+MobSDK {
+    appKey "2e675d7f920b6"
+    appSecret "982d88abf6d46f5f9aec6afd978f64e5"
+    ShareSDK {
+        //平台配置信息
+        devInfo {
+            Wechat {
+                id 1
+                sortId 1
+                appId "wx08beee1c887cb3b8"
+                appSecret "d60fadd365b81427421ffc5539e2fdd7"
+                bypassApproval false
+                enable true
+            }
+            WechatMoments {
+                id 2
+                sortId 2
+                appId "wx08beee1c887cb3b8"
+                appSecret "d60fadd365b81427421ffc5539e2fdd7"
+                bypassApproval false
+                enable true
+            }
+//            WechatFavorite {
+//                id 3
+//                sortId 3
+//                appId "wxb48e141599bd35cd"
+//                appSecret "8c796e291373c6344011590e20608fe9"
+//                bypassApproval false
+//                 enable true
+//            }
+//            QQ {
+//                id 4
+//                sortId 4
+//                appId "1109797020"
+//                appKey "mEo6n5jyjiRSrVyQ"
+//                shareByAppClient true
+//                bypassApproval false
+//                enable true
+//            }
+        }
+    }
+}
+
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        applicationId "com.hlt.jzwebsite"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {        //支持的SO库架构（只兼容 armeabi-v7a）
+            abiFilters/* 'armeabi',*/ 'armeabi-v7a'/*, 'x86'*/
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+        }
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    //自定义输出配置
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "jzgw_v${variant.versionName}_${variant.name}.apk"
+        }
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    //多渠道打包配置
+    productFlavors {
+        // 不设置，继承defaultConfig中的配置
+    }
+
+    dexOptions {
+        jumboMode true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //test
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    //release
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    //develop
+    implementation rootProject.ext.libraries
+    kapt "com.github.bumptech.glide:compiler:$rootProject.ext.dependVersion.glide"
+
+    //微信授权登录/分享
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.4.0'
+    implementation 'tech.jianyue.auth:auth:1.5.0'
+    implementation 'tech.jianyue.auth:auth_weixin:1.5.0'
+    //adapter
+    implementation 'org.byteam.superadapter:superadapter:3.6.8'
+    //noice
+    implementation 'com.sunfusheng:MarqueeView:1.4.1'
+    //fastjson
+    implementation 'com.alibaba:fastjson:1.1.68.android'
+    //EventBus 原生
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //kotlin + Rxjava2 实现 eventBus
+//    implementation 'com.eightbitlab:rxbus:1.0.2'
+    //运行时权限
+    implementation 'pub.devrel:easypermissions:1.2.0'
+    //大图预览
+    implementation 'com.ycjiang:imgepreviewlibrary:1.1.3'
+    implementation 'com.zhy:okhttputils:2.6.2'
+    //自定义输入密码框
+    implementation project(path: ':lib')
+    //dialog
+    implementation 'com.kongzue.dialog_v3x:dialog:3.1.6'
+    //CreateProcess error=206, 文件名或扩展名太长。
+//    id "ua.eshepelyuk.ManifestClasspath" version "1.0.0"
+    // 视屏播放器
+    implementation 'com.shuyu:GSYVideoPlayer:2.1.1'
+
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_bar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    app:elevation="4dp">
+    <!--    android:fitsSystemWindows="true"
+    android:theme="@style/AppTheme.AppBarOverlay"-->
+
+    <!-- 该属性可以隐藏标题栏  折叠悬浮效果 -->
+    <!--  app:layout_scrollFlags="scroll|enterAlways"-->
+    <!-- 如果后期需要，可参阅 https://blog.csdn.net/jxf_access/article/details/79564669-->
+<!--  app:popupTheme="@style/AppTheme.PopupOverlay"-->
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            app:srcCompat="@mipmap/ic_arrows_back_b" />
+
+        <TextView
+
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:visibility="visible"
+            tools:text="@string/home"/>
+    </RelativeLayout>
+
+</com.google.android.material.appbar.AppBarLayout>

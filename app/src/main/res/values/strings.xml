@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name">跨融平台</string>
+
+    <string name="home">首页</string>
+    <string name="dynamics">企业动态</string>
+    <string name="cooperation">商务合作</string>
+    <string name="mine">我的</string>
+
+    <string name="retry">重新加载</string>
+    <string name="loading">加载中…</string>
+    <string name="title_err">未知标题</string>
+    <string name="title_empty"></string>
+    <string name="web_page_err">网页 %s 加载失败 o(╥﹏╥)o</string>
+    <string name="no_data">暂无数据 o(╥﹏╥)o \n 点击屏幕重新加载</string>
+    <string name="error_loading">加载失败 o(╥﹏╥)o \n 点击屏幕重新加载</string>
+
+    <string name="exit_hint">再按一次退出</string>
+    <string name="network_error">网络连接不可用,请检查网络!</string>
+    <string name="business_error">业务处理失败,后台未返回具体原因!</string>
+
+    <string name="fresh">新</string>
+    <string name="on_top">置顶</string>
+    <string name="search">搜索</string>
+    <string name="scan">扫码</string>
+    <string name="scan_result">扫码结果</string>
+    <string name="i_know">我知道了</string>
+    <string name="camera_permission_reason">开启摄像头权限才能扫码，请授予权限以便正常使用</string>
+    <string name="no_permission">缺少必要权限，该功能无法正常使用</string>
+
+    <string name="user_name">用户名</string>
+
+    <!--home page-->
+    <string name="see_more">查看更多> </string>
+    <string name="introduce_tip">企业介绍 </string>
+    <string name="online_tip">在线纪实 </string>
+    <string name="class_tip">课堂培训 </string>
+
+    <string name="home_end_tip_txt">为人民服务</string>
+    <string name="dynamics_end_tip_txt">更多精彩内容敬请期待</string>
+    <string name="cooperation_end_tip_txt">合作共赢 共创未来 </string>
+    <string name="title_project">上市项目</string>
+    <string name="title_contactway">联系方式</string>
+    <string name="title_class">培训课堂</string>
+    <!--mine page-->
+    <string name="mine_txt_collection">收藏</string>
+    <string name="mine_txt_noice">公告:</string>
+    <string name="mine_extension_txt">我要推广</string>
+    <string name="mine_balance_txt">账户余额（平台通用）</string>
+    <string name="mine_balance_txts">（全平台通用）</string>
+    <string name="mine_integral_txt">积分（累计获得）</string>
+    <string name="mine_integral_txts">（累计获得）</string>
+    <string name="mine_extension_amount_txt">推广佣金（累计获得）</string>
+    <string name="mine_yesterday_txt">昨日收益（净收入）</string>
+    <string name="mine_yesterdays_txt">（净收益）</string>
+    <string name="symbol_txt">¥</string>
+    <string name="mine_extension_txt_tip">我要成为跨融商城代言</string>
+
+    <string name="team_txt">我的团队</string>
+    <string name="team_txt_old">我的团队人数</string>
+    <string name="team_txt_tip">(总人数)</string>
+    <string name="team_txt_tip_new">人</string>
+    <string name="team_txt_num">0</string>
+    <string name="mine_txt_partner">战略合作伙伴</string>
+    <!--我的收藏-->
+    <string name="title_my_collection">我的收藏</string>
+    <string name="collection">收藏</string>
+    <string name="collect_succ">收藏成功</string>
+    <string name="collection_cancel">已取消收藏</string>
+
+    <string name="title_my_setting">设置</string>
+    <string name="title_my_setting_exit">退出登录</string>
+
+    <string name="title_modify_pwd">修改密码</string>
+    <string name="title_modify_phone">更换手机号</string>
+    <string name="et_input_txt_old_pwd">请填写旧密码</string>
+    <string name="et_input_txt_new_pwd">请填写新密码</string>
+    <string name="confirm">确定</string>
+
+    <string name="et_input_txt_phone">请输入手机号</string>
+    <string name="et_input_txt_vertic_code">请输入验证码</string>
+    <string name="btn_txt_vertic_code">获取验证码</string>
+
+    <!--check empty-->
+    <string name="check_blank_old_pwd">旧密码不能为空</string>
+    <string name="check_blank_new_pwd">新密码不能为空</string>
+    <string name="check_blank_phone">手机号不能为空</string>
+    <string name="check_phone_invalid">手机号不正确</string>
+    <string name="check_blank_verti_code">验证码不能为空</string>
+
+
+    <string name="dialog_tip_exit_app">确认要退出登录吗?</string>
+    <string name="event_message_tip">请勿重复注册事件</string>
+    <string name="setting_txt_modify">修改</string>
+    <string name="setting_txt_unbind_phone">未绑定</string>
+
+    <string name="bind_phone_tip_0">验证码错误或已过期</string>
+    <string name="bind_phone_tip_1">此手机号已与当前账号绑定</string>
+    <string name="bind_phone_tip_2">此手机号已与其他账号绑定</string>
+    <string name="bind_phone_tip_3">手机号更改成功</string>
+    <string name="bind_phone_tip_4">登录者信息</string>
+
+    <string name="modify_pwd_tips">密码修改成功</string>
+
+    <string name="modify_phone_txt_tip">请输入要绑定的新手机号</string>
+    <string name="modify_pwd_old">旧密码</string>
+    <string name="modify_pwd_new">新密码</string>
+    <string name="modify_pwd_txt_tip">密码为6-16位,数字+字母或字符</string>
+    <string name="modify_pwd_tip">密码非 6到16位数字+字母或字符</string>
+
+    <string name="app_update_tip">发现新版本</string>
+    <string name="relogin_tip">用户信息过期，请点击 我的 重新登录</string>
+
+    <string name="exchange_phone">更换手机号</string>
+    <!--立即推广-->
+    <string name="prommotion">立即推广</string>
+    <string name="invite_copy_desc">可以直接复制邀请码给好友下载APP注册填写海报\n中的二维码和邀请链接已经包含您的邀请信息</string>
+    <string name="invite_friends">邀请好友</string>
+    <string name="savePic">保存图片</string>
+    <string name="shareWeiXin">分享到微信</string>
+    <string name="invite_code_msg_tip">邀请码空了哦</string>
+    <string name="invite_code_msg_succ">复制成功</string>
+    <string name="prommotion_txt_tip">我要为 跨融商城 代言</string>
+    <!--    验证码登录-->
+    <string name="title_verifica_login"></string>
+    <string name="login_verifica_txt_tip">欢迎登录跨融平台</string>
+    <string name="login_verifica_txt_tip_input">输入验证码</string>
+    <string name="login_verifica_tip_desc">未注册的，手机号验证后自动创建跨融平台账户</string>
+    <string name="login_verifica_tip_agree">登陆代表同意跨融平台用户协议、隐私政策，并授权使用您 的跨融平台账号信息（如昵称、头像、ID）以便您同意管理</string>
+    <string name="et_verticode_tip_error">验证码有误</string>
+    <string name="et_phone_tip_error">手机号输入错误，请重新输入</string>
+
+
+    <string name="dialog_txt_tip">用户协议与隐私保护声明</string>
+    <string name="dialog_txt_content">我们非常重视您的个人信息和隐私保护。为了有效保障您的个人权益，在使用“跨融平台”服务前，请您务必审慎于都《服务协议》、《服务协议之补充议》与《隐私保护声明》内的所有条款，尤其是：我们非常重视您的个人信息和隐私保护。为了有效保障您的个人权益，在使用“跨融平台”服务前，请您务必审慎于都《服务协议》、《服务协议之补充议》与《隐私保护声明》内的所有条款，常重视您的个人信息和隐私保护。为了有效保障您的个人权益，在使用“跨融平台”服务前，请您务必审慎于都《服务协议》、《服务协议之补充议》与《隐私保护声明》内的所有条款，常重视您的个人信息和隐私保护。为了有效保障您的个人权益，在使用“跨融平台”服务前，请您务必审慎于都《服务协议》、《服务协议之补充议》与《隐私保护声明》内的所有条款，保障您的个人权益，在隐私保护。为了有效保障您的个人权益，在使用“跨融平台”服务前，请您务必审慎于都《服务协议》、《服务协议之补充议》与《隐私保护声明》内的所有条款，常重视您的个人信息和隐私保护。为了有效保障您的个人权益，在使用“跨融平台”服务前，请您务必查看阅读.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_video_player"></string>
+    <string name="video_player_error">播放失败</string>
+
+    <string name="txt_tip_onlogin">HI~欢迎来到跨融平台</string>
+    <string name="txt_login">登录/注册</string>
+
+
+</resources>

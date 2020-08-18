@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="White">#FFFFFF</color>
+    <color name="Black">#000000</color>
+    <color name="Red">#f44336</color>
+    <color name="Pink">#e91e63</color>
+    <color name="Purple">#9c27b0</color>
+    <color name="Deep_Purple">#673ab7</color>
+    <color name="Indigo">#3f51b5</color>
+    <color name="Blue">#2196f3</color>
+    <color name="Light_Blue">#03a9f4</color>
+    <color name="Cyan">#00bcd4</color>
+    <color name="Teal">#009688</color>
+    <color name="Green">#4caf50</color>
+    <color name="Light_Green">#8bc34a</color>
+    <color name="Lime">#cddc39</color>
+    <color name="Yellow">#ffeb3b</color>
+    <color name="Amber">#ffc107</color>
+    <color name="Orange">#ff9800</color>
+    <color name="color_btn_yellow">#FFD892</color>
+    <color name="Deep_Orange">#ff5722</color>
+    <color name="Brown">#795548</color>
+    <color name="Grey">#9e9e9e</color>
+    <color name="Blue_Grey">#607d8b</color>
+
+    <!--  develop color -->
+    <color name="colorPrimary">#CC0000</color>
+    <color name="colorPrimaryDark">#CC0000</color>
+    <color name="colorYello">#FFAF10</color>
+    <color name="colorPrimaryLight">#BBDEFB</color>
+    <color name="colorAccent">#448AFF</color>
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+
+    <!--默认背景色-->
+    <color name="backgroundColor">#EEEEEE</color>
+    <color name="defualt">#F2F2F2</color>
+    <!-- title 半透明背景颜色 -->
+    <color name="color_title_bg">#CCFFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="transparent_half_70">#B3000000</color>
+    <color name="viewBackground">@color/White</color>
+    <!--棕色 亮-->
+    <color name="brown_light">#B2A467</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="half_transparent">#4f000000</color>
+    <color name="half_transparent_white">#80ffffff</color>
+
+    <color name="font1">#333333</color>
+    <color name="font2">#9d9d9d</color>
+    <color name="color_toast_bg">#423E3A</color>
+
+    <color name="divider1">#ebebeb</color>
+    <color name="divider2">#d6d6d6</color>
+
+    <color name="background_common">#ebebeb</color>
+    <color name="background_common_dark">#d6d6d6</color>
+
+    <color name="viewLineColor">#F0F0F0</color>
+    <color name="color_bg_invite">#FE5D53</color>
+    <color name="picture_color_light_grey">#999999</color>
+    <color name="color_btn_invite">#FB554D</color>
+    <color name="color_txt_invite_copy_desc">#F3B0A9</color>
+    <color name="picture_color_e">#EEEEEE</color>
+    <color name="picture_line_color">#FCEDED</color>
+    <color name="color_dark_brown">#C38E65</color>
+
+</resources>

@@ -1,0 +1,13 @@
+一、Gson.fromJson的使用 (Kotlin)
+    1、json数据反序列化为普通对象
+        ##、kotlin 版 使用Gson 将json 转 实体，要加上 fromJson<Person> 类型，否则可能会出错
+         *    Gson().fromJson<Person>(personsJson,Person::class.java)
+
+    2、json数据反序列化为普通对象
+         ##、kotlin 版 使用Gson 将json 直接转 list，要通过 TypeToken 来实现，否则可能会出错
+           *   private lateinit var newPersons: ArrayList<Person>
+           *   val listType = object : TypeToken<ArrayList<Person>>() {}.type
+           *   newPersons = Gson().fromJson(personsJson, listType)
+    3、相关博文查阅链接：
+      http://www.pianshen.com/article/9123157203/
+      http://www.pianshen.com/article/7523235853/;jsessionid=5587457DC8E514C71D15F5D6A453C40A

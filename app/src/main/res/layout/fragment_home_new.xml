@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.classic.common.MultipleStatusView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/multiple_status_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/viewBackground">
+
+        <!--android:fitsSystemWindows="true"-->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/defualt"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/defualt">
+                <!-- module banner-->
+                <cn.bingoogolapple.bgabanner.BGABanner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_200"
+                    app:banner_indicatorGravity="bottom|center_horizontal"
+                    app:banner_pointAutoPlayAble="false"
+                    app:banner_pointContainerBackground="@android:color/transparent"
+                    app:banner_pointDrawable="@drawable/selector_banner_point"
+                    app:banner_pointTopBottomMargin="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--module one  项目分类-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyc_project"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:overScrollMode="never"
+                    android:paddingLeft="@dimen/dp_12"
+                    android:paddingTop="@dimen/dp_12"
+                    android:paddingBottom="@dimen/dp_12"
+                    android:scrollbars="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/banner"
+                    app:spanCount="4" />
+                <!--module  公告条-->
+                <include layout="@layout/ui_layout_home_noice_module_new" />
+                <!--module two   企业介绍-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyc_introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:overScrollMode="never"
+                    android:scrollbars="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/cons_noice"
+                    app:spanCount="3"
+                    tools:listItem="@layout/home_item" />
+                <!--module three   在线纪实-->
+                <include layout="@layout/ui_layout_home_tip_view" />
+
+                <include layout="@layout/ui_layout_home_video_module" />
+
+                <!--module four  培训课堂-->
+                <!--app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyc_classroom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@color/defualt"
+                    android:overScrollMode="never"
+                    android:paddingLeft="@dimen/dp_6"
+                    android:paddingRight="@dimen/dp_6"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:scrollbars="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/web_container"
+                    app:spanCount="2"
+                    tools:listItem="@layout/home_item" />
+                <!--module end-->
+                <include layout="@layout/ui_layout_home_end_module" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</com.classic.common.MultipleStatusView>
